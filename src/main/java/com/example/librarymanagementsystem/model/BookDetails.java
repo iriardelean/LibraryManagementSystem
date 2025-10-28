@@ -4,18 +4,18 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class BookDetails extends Publication {
-    private List<BookAuthor> BookAuthors;
+    private List<BookAuthor> bookAuthors;
 
-    public BookDetails(String title, String id) {
+    public BookDetails(String id, String title) {
         super(id, title);
-        this.BookAuthors = new ArrayList<>();
+        this.bookAuthors = new ArrayList<>();
     }
 
     public List<BookAuthor> getBookAuthors() {
-        return BookAuthors;
+        return bookAuthors;
     }
 
     public void setBookAuthors(List<BookAuthor> bookAuthors) {
-        BookAuthors = bookAuthors;
+        bookAuthors = bookAuthors;
     }
 }
