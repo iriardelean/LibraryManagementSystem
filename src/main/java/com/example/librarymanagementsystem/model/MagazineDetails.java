@@ -3,7 +3,7 @@ package com.example.librarymanagementsystem.model;
 public class MagazineDetails extends Publication {
     private String Publisher;
 
-    public MagazineDetails(String title, String id, String Publisher) {
+    public MagazineDetails(String id, String title, String Publisher) {
         super(id, title);
         this.Publisher = Publisher;
     }
