@@ -1,16 +1,17 @@
 package com.example.librarymanagementsystem.model;
 
+import java.util.ArrayList;
 import java.util.List;
 
 public abstract class Publication {
     private String Id;
-    private String title;
+    private String Title;
     private List<String> copies;
 
-    public Publication(String title, List<String> copies, String id) {
-        this.title = title;
-        this.copies = copies;
-        Id = id;
+    public Publication(String Title, String Id) {
+        this.Title = Title;
+        this.copies = new ArrayList<>();
+        this.Id = Id;
     }
 
     public String getId() {
@@ -30,10 +31,10 @@ public abstract class Publication {
     }
 
     public String getTitle() {
-        return title;
+        return Title;
     }
 
     public void setTitle(String title) {
-        this.title = title;
+        this.Title = title;
     }
 }
