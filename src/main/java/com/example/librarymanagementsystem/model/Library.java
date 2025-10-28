@@ -1,5 +1,9 @@
 package com.example.librarymanagementsystem.model;
 
+import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.ResponseBody;
+
 import java.util.List;
 
 public class Library {
@@ -45,5 +49,15 @@ public class Library {
 
     public void setReadableItems(List<ReadableItem> readableItems) {
         ReadableItems = readableItems;
+    }
+
+    @Controller
+    public static class LibraryController {
+
+        @GetMapping("/library")
+        @ResponseBody
+        public String sayLibrary() {
+            return "Die Anwendung funktioniert! (Library)";
+        }
     }
 }

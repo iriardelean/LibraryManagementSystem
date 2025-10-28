@@ -1,5 +1,9 @@
 package com.example.librarymanagementsystem.model;
 
+import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.ResponseBody;
+
 import java.util.Date;
 import java.util.List;
 
@@ -57,4 +61,6 @@ public class Loan {
     public void setItems(List<ReadableItem> items) {
         this.items = items;
     }
+
+
 }

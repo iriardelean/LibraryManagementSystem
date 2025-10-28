@@ -1,5 +1,8 @@
 package com.example.librarymanagementsystem.model;
 
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.ResponseBody;
+
 public class ReadableItem {
     private String Id;
     private String publicationId;
@@ -44,4 +47,6 @@ public class ReadableItem {
     public void setStatus(ReadableItemsStatus readableItemsStatus) {
         this.readableItemsStatus = readableItemsStatus;
     }
+
+
 }
