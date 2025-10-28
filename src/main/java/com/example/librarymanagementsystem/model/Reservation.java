@@ -5,16 +5,16 @@ import java.util.Date;
 public class Reservation {
     private String Id;
     private String memberId;
-    private String ReadableitemId;
+    private String ReadableItemId;
     private Date date;
-    private ReservationStatus ReservationStatus;
+    private ReservationStatus reservationStatus;
 
-    public Reservation(String id, String memberId, String readableitemId, Date date, ReservationStatus ReservationStatus) {
+    public Reservation(String id, String memberId, String readableitemId, Date date) {
         Id = id;
         this.memberId = memberId;
-        ReadableitemId = readableitemId;
+        ReadableItemId = readableitemId;
         this.date = date;
-        this.ReservationStatus = ReservationStatus;
+        this.reservationStatus = ReservationStatus.ACTIVE;
     }
 
     public String getId() {
@@ -34,11 +34,11 @@ public class Reservation {
     }
 
     public String getReadableitemId() {
-        return ReadableitemId;
+        return ReadableItemId;
     }
 
     public void setReadableitemId(String readableitemId) {
-        ReadableitemId = readableitemId;
+        ReadableItemId = readableitemId;
     }
 
     public Date getDate() {
@@ -50,10 +50,10 @@ public class Reservation {
     }
 
     public ReservationStatus getStatus() {
-        return ReservationStatus;
+        return reservationStatus;
     }
 
-    public void setStatus(ReservationStatus ReservationStatus) {
-        this.ReservationStatus = ReservationStatus;
+    public void setStatus(ReservationStatus reservationStatus) {
+        this.reservationStatus = reservationStatus;
     }
 }

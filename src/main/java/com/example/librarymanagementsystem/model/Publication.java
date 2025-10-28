@@ -6,7 +6,7 @@ import java.util.List;
 public abstract class Publication {
     private String Id;
     private String Title;
-    private List<String> copies;
+    private List<ReadableItem> copies;
 
     public Publication(String Title, String Id) {
         this.Title = Title;
@@ -22,11 +22,11 @@ public abstract class Publication {
         Id = id;
     }
 
-    public List<String> getCopies() {
+    public List<ReadableItem> getCopies() {
         return copies;
     }
 
-    public void setCopies(List<String> copies) {
+    public void setCopies(List<ReadableItem> copies) {
         this.copies = copies;
     }
 
