@@ -9,11 +9,11 @@ public class ReadableItem {
     private String barcode;
     private ReadableItemsStatus readableItemsStatus;
 
-    public ReadableItem(String id, String publicationId, String barcode, ReadableItemsStatus readableItemsStatus) {
+    public ReadableItem(String id, String publicationId, String barcode) {
         Id = id;
         this.publicationId = publicationId;
         this.barcode = barcode;
-        this.readableItemsStatus = readableItemsStatus;
+        this.readableItemsStatus = ReadableItemsStatus.AVAILABLE;
     }
 
     public String getId() {
