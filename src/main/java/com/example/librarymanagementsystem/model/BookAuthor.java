@@ -1,5 +1,6 @@
 package com.example.librarymanagementsystem.model;
 
+
 public class BookAuthor {
     private String Id;
     private String bookId;
@@ -34,4 +35,5 @@ public class BookAuthor {
     public void setAuthorId(String authorId) {
         this.authorId = authorId;
     }
+
 }

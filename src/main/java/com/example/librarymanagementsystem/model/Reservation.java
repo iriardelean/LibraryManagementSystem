@@ -1,5 +1,9 @@
 package com.example.librarymanagementsystem.model;
 
+import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.ResponseBody;
+
 import java.util.Date;
 
 public class Reservation {
@@ -56,4 +60,5 @@ public class Reservation {
     public void setStatus(ReservationStatus reservationStatus) {
         this.reservationStatus = reservationStatus;
     }
+
 }

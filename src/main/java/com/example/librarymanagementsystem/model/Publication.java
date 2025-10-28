@@ -37,4 +37,5 @@ public abstract class Publication {
     public void setTitle(String title) {
         this.Title = title;
     }
+
 }
