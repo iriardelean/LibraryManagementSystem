@@ -23,13 +23,5 @@ public class BookDetails extends Publication {
         BookAuthors = bookAuthors;
     }
 
-    @Controller
-    public static class BookDetailsController {
 
-        @GetMapping("/bookdetails")
-        @ResponseBody
-        public String sayBookDetails() {
-            return "Die Anwendung funktioniert! (BookDetails)";
-        }
-    }
 }

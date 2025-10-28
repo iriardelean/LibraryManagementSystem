@@ -40,13 +40,4 @@ public class BookAuthor {
     }
 
 
-    @Controller
-    public static class BookAuthorController {
-
-        @GetMapping("/bookauthor")
-        @ResponseBody
-        public String sayBookAuthor() {
-            return "Die Anwendung funktioniert! (BookAuthor)";
-        }
-    }
 }

@@ -51,13 +51,4 @@ public class Library {
         ReadableItems = readableItems;
     }
 
-    @Controller
-    public static class LibraryController {
-
-        @GetMapping("/library")
-        @ResponseBody
-        public String sayLibrary() {
-            return "Die Anwendung funktioniert! (Library)";
-        }
-    }
 }
