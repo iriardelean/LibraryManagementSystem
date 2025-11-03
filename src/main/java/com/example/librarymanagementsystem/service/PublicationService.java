@@ -2,33 +2,40 @@ package com.example.librarymanagementsystem.service;
 
 import com.example.librarymanagementsystem.model.Publication;
 import com.example.librarymanagementsystem.repository.PublicationRepository;
+import org.springframework.stereotype.Service;
 
 import java.util.List;
 import java.util.Optional;
 
-public class PublicationService<T extends Publication> {
+@Service
+public class PublicationService {
 
-    private final PublicationRepository<T> repository;
+    private final PublicationRepository repository;
 
-    public PublicationService(PublicationRepository<T> repository) {
+    public PublicationService(PublicationRepository repository) {
         this.repository = repository;
     }
 
-    public T create(T entity) {
+    // default constructor uses in-memory repository
+    public PublicationService() {
+        this(new PublicationRepository());
+    }
+
+    public Publication create(Publication entity) {
         if (entity == null)
             throw new IllegalArgumentException("Publication cannot be null");
         return repository.save(entity);
     }
 
-    public Optional<T> findById(String id) {
+    public Optional<Publication> findById(String id) {
         return repository.findById(id);
     }
 
-    public List<T> findAll() {
+    public List<Publication> findAll() {
         return repository.findAll();
     }
 
-    public T update(T entity) {
+    public Publication update(Publication entity) {
         if (entity == null || entity.getId() == null)
             throw new IllegalArgumentException("Publication and Id cannot be null");
         return repository.save(entity);

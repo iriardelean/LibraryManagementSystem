@@ -7,10 +7,22 @@ public class Author {
     private String Name;
     private List<BookAuthor> books;
 
+    // new properties
+    private String biography;
+    private Integer birthYear;
+
     public Author(String id, String name, List<BookAuthor> books) {
         Id = id;
         Name = name;
         this.books = books;
+    }
+
+    public Author(String id, String name, List<BookAuthor> books, String biography, Integer birthYear) {
+        Id = id;
+        Name = name;
+        this.books = books;
+        this.biography = biography;
+        this.birthYear = birthYear;
     }
 
     public String getId() {
@@ -35,5 +47,21 @@ public class Author {
 
     public void setBooks(List<BookAuthor> books) {
         this.books = books;
+    }
+
+    public String getBiography() {
+        return biography;
+    }
+
+    public void setBiography(String biography) {
+        this.biography = biography;
+    }
+
+    public Integer getBirthYear() {
+        return birthYear;
+    }
+
+    public void setBirthYear(Integer birthYear) {
+        this.birthYear = birthYear;
     }
 }
